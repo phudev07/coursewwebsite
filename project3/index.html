@@ -31,6 +31,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reponsive.css">
     <title>project 3 </title>
 </head>
 <body>
@@ -38,9 +39,9 @@
     <header class="header">
         <div class="container">
             <div class="header-top">
-                <a href="./"><img src="assets/logo.svg" alt="logo" class="logo"></a>
+                <a href="./"><img src="assets/logo.svg" alt="logo" class="logo header__logo"></a>
                 <nav class="navbar">
-                    <ul class="navbar__list">
+                    <ul class="navbar__list" id="navbar__list--pc">
                         <li class="navbar__item">
                             <a href="#!" class="navbar__link navbar__link--active">Home</a>
                             <a href="#!" class="navbar__link">Services</a>
@@ -78,6 +79,35 @@
             </section>
         </div>
     </header>
+    <!-- tablet mobile header -->
+    <div class="mobile-header">
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <!-- menu -->
+        <label for="menu-checkbox"><svg class="menu-header__icon"   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg></label>
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+
+        <!-- menu content -->
+        <div class="menu-drawer">
+            <div class="menu-drawer__top">
+                <a href="./"><img src="assets/Logo.svg" alt="logo" class="logo"></a>
+                <label for="menu-checkbox"><svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zM167 167c9.4-9.4 24.6-9.4 33.9 0l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></label>
+            </div>
+            <!-- nav mobile -->
+            <ul id="navbar__list--mobile"></ul>
+            <script>
+                const navPC = document.querySelector("#navbar__list--pc");
+                const navMobile = document.querySelector("#navbar__list--mobile");
+                navMobile.innerHTML = navPC.innerHTML;
+            </script>
+
+            <div class="show-on-mobile">
+                <div class="separate"></div>
+                <li class="navbar__item"><a href="#!" class="navbar__link">Log In</a></li>
+                <li class="navbar__item"><a href="#!" class="navbar__link">Sign Up</a></li>
+            </div>
+        </div>
+    </div>
 
     <!-- main -->
     <main>
@@ -278,7 +308,7 @@
                 <div class="blog__inner">
                     <!-- left blog -->
                     <section class="blog__content">
-                        <h2 class="section-heading">Read Latest News & Events.</h2>
+                        <h2 class="section-heading blog__heading">Read Latest News & Events.</h2>
                         <a href="#!" class="all__blog">Read All Blog</a>
                         <div class="control blog__control">
                             <button class="control__btn blog__control--back"><svg xmlns="http://www.w3.org/2000/svg" width="6" height="12" viewBox="0 0 6 12" fill="none">

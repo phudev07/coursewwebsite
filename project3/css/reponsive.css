@@ -1,0 +1,369 @@
+/* pc */
+@media (min-width: 992px) {
+    .mobile-header{
+        display: none;
+    }
+
+}
+
+/* tablet & mobile */
+@media (max-width: 991.98px) {
+    .navbar{
+        display: none;
+    }
+
+    .header-top{
+        position: relative;
+    }
+
+    .header__logo{
+        position: absolute;
+        left: 50%;
+        translate: -50% -50%;
+    }
+
+    /* căn lại vị trí của menu icon */
+    .mobile-header .menu-header__icon {
+        width: 28px;
+        height: 28px;
+        fill: #fff;
+        position: absolute;
+        top: 53px;
+        left: 25px;
+        cursor: pointer;
+        
+    }
+
+    .menu-overlay{
+        position: fixed;
+        background: rgba(0 , 0, 0, 0.3);
+        inset: 0;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+    }
+
+    /* kiểm tra nếu checkbox được check thì hiển thị overlay */
+
+    .menu-checkbox:checked ~ .menu-overlay{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-drawer{
+        position: fixed;
+        background-color: #0f1e2c;
+        inset: 0 60% 0 0;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.3s;
+        padding: 60px;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer{
+        transform: translateX(0);
+    }
+
+    .close__menu{
+        width: 24px;
+        fill: #fff
+    }
+
+    .menu-drawer__top{
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+    #navbar__list--mobile .navbar__item{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .navbar__list{
+        margin-top: 25px;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    #navbar__list--mobile{
+        margin-top: 25px;
+    }
+
+    .navbar__link{
+        display: block;
+    }
+
+    .hero{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero__content{
+        order: 2;
+        width: 80%;
+        text-align: center;
+        margin: 22px auto;
+    }
+
+    .hero__media{
+        order: 1;
+        margin: auto;
+    }
+
+    .service_row{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .service__img{
+        width: 100%;
+    }
+    .service-item{
+        width: 80%;
+        text-align: start;
+    }
+
+    .service__list{
+        text-align: center;
+    }
+
+    .work__list{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .about-row{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .about__img--small{
+        display: none;
+    }
+
+    .about__media{
+        width: 100%;
+    }
+    .about__img--big{
+        width: 100%;
+    }
+
+    .about-content{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .virtual__center{
+        grid-template-columns: repeat(2 , 1fr);
+        row-gap: 30px;
+    }
+
+    .virtual__img--one{
+        margin: 0 auto;
+        transform: translateY(28px);
+    }
+
+    .install__img{
+        display: none;
+    }
+
+    .install__content{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .blog__inner{
+        flex-direction: column;
+    }
+
+    .blog__list{
+        order:1;
+    }
+
+    .blog__content{
+        order:2;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blog__heading{
+        margin-top: 20px;
+    }
+    
+
+
+
+    
+}
+
+
+
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991.98){
+    .show-on-mobile{
+        display: none;
+    }
+    
+}
+
+
+/*mobile */
+@media (max-width: 767.98px) {
+    .action{
+        display: none;
+    }
+    .mobile-header .menu-header__icon{
+        top: 33px;
+    }
+
+    .menu-drawer{
+        padding: 20px;
+    }
+
+    .show-on-mobile{
+        text-align: left;
+    }
+
+    .separate{
+        border-top: 1.5px solid #8c8b8b;
+        margin-top: 10px;
+    }
+
+    .hero__img--second{
+        display: none;
+    }
+    .hero__img--first{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .hero__heading{
+        font-size: 3rem;
+    }
+    .hero__desc{
+        font-size: 1rem;
+    }
+
+    .hero__row{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+
+    .hero__phone{
+        margin: 0 auto;
+    }
+
+    .hero__content{
+        padding-top: 0;
+    }
+
+    .service{
+        padding-top: 35px;
+    }
+
+    .service__heading{
+        font-size: 3rem;
+    }
+
+    .service__decs{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .work__list{
+        margin-top: 30px;
+    }
+
+    .about{
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+
+    .about__heading{
+        font-size: 3rem;
+    }
+
+    .about__desc{
+        font-size: 1rem;
+    }
+
+    .virtual{
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+
+    .virtual__center{
+        grid-template-columns: repeat(1 ,1fr);
+    }
+
+    .install{
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+    .install__inner{
+        padding: 8px;
+    }
+
+    .install__heading{
+        font-size: 4rem;
+        width: 100%;
+    }
+
+    .install__desc{
+        font-size: 1.5rem;
+    }
+
+    .blog{
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .blog__list{
+        display: block;
+        row-gap: 30px;
+    }
+
+    .blog-item{
+        margin-bottom: 10px;
+    }
+
+    .blog__heading{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .appointment{
+        margin-top: 0;padding: 20px 20px 50px 20px;
+        height: 100%;
+
+    }
+
+    .appointment__heading{
+        font-size: 3rem;
+    }
+
+    .appointment__desc--primary,.appointment__desc--seconary{
+        font-size: 1.5rem;
+    }
+
+    .footer{
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .footer__top{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+}
+

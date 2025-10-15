@@ -292,7 +292,7 @@ header{
 .work{
     padding: 100px 0;
     background: #F6FBFF;
-    height: 826px;
+
 }
 
 .work__desc{
@@ -300,13 +300,13 @@ header{
 }
 
 .work__list{
-    display: flex;
-    margin-top: 70px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    column-gap: 30px;
 }
 
 .work-item{
-    width: 370px;
+
     flex-shrink: 0;
     border-radius: 4px;
     background: #FFF;
@@ -371,8 +371,7 @@ header{
 }
 
 .about__img--big{
-    width: 512px;
-    height: 370px;
+
     flex-shrink: 0;
     border-radius: 6px;
     box-shadow: 1 rgba(0, 0, 0, 0.07);
@@ -443,6 +442,7 @@ header{
     margin-top: 28px;
     max-width: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .virtual__img{
@@ -455,10 +455,11 @@ header{
 .virtual__heading{
     color: #10375C;
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.2; /* 120% */
     letter-spacing: -1px;
+    margin-top: 15px;
 }
 
 .virtual__desc{
